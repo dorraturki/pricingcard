@@ -1,0 +1,241 @@
+:root {
+    --Mobile: 375px;
+    --Desktop: 1440px;
+    --Soft-cyan: hsl(174, 77%, 80%);
+    --Strong-cyan: hsl(174, 86%, 45%);
+    --Light-Grayish-Red: hsl(14, 92%, 95%);
+    --Light-Red: hsl(15, 100%, 70%);
+    --Pale-Blue: hsl(226, 100%, 87%);
+    --font: 'Manrope', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font);
+    background-color: hsl(230, 100%, 99%);
+}
+.backgroud img{
+    position: fixed;
+    width: 1980px;
+    z-index: -1;
+    top: -150px;
+}
+.container{
+    position: relative;
+    margin: auto;
+    width: 700px;
+}
+.title{
+    padding-top: 100px;
+    text-align: center;
+}
+.title img{
+    position: absolute;
+    right: 277px;
+    top: 50px;
+    z-index: -1;
+}
+.title h4 {
+    font-weight: 800;
+    font-size: 25px;
+    color: hsl(227, 35%, 25%) ;
+}
+.title h5 {
+    font-weight: 600;
+    color: hsl(225, 20%, 60%);
+    margin-top: 10px;
+}
+.card {
+    background-color: hsl(0, 0%, 100%);
+    width: 550px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    padding-top: 50px;
+    padding-left: 40px;
+    height: 350px;
+    box-shadow: 1px 3px 15px hsla(228, 16%, 64%, 0.288);
+}   
+.nums{
+    display: flex;
+}
+.nums h4{
+    font-size: 30px;
+    margin-left: 200px;
+    margin-top: -15px;
+    color: hsl(227, 35%, 25%);
+}
+.nums h6 {
+    margin-left: 10px;
+    color:  hsl(225, 20%, 60%) ;
+    font-weight: 600;
+}
+.nums h5 {
+    color:  hsl(225, 20%, 60%) ;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+/* * Slider */
+.slider{
+    -webkit-appearance: none;
+    width: 475px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, var(--Soft-cyan) 0%, var(--Soft-cyan) 28.27%,hsl(224, 65%, 95%) 28.27%,hsl(224, 65%, 95%) 100%);
+    outline: none;
+    cursor: pointer;
+    height: 6px;
+    border-radius: 5px;
+}
+input::-webkit-slider-thumb {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+    background: url(/Solution/images/icon-slider.svg) var(--Strong-cyan) ;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 7px 25px 0px var(--Strong-cyan);
+}
+.details{
+    display: flex;
+}
+.details h5 {
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+    font-size: 12px;
+}
+.details h5:nth-child(1){
+    margin-left: 130px;
+}
+.details h5:nth-child(3){
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* * Switch Slider */
+.switch{
+    margin-left: 20px;
+    width: 35px;
+    height: 17px;
+    position: relative;
+    display: inline-block;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggle{
+    background-color:hsl(223, 50%, 87%) ;
+    -webkit-transition: .4s;
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.toggle::before{
+    position: absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    left: 3px;
+    bottom: 2px;
+    transition: 0.4s;
+    border-radius: 50%;
+    background-color: white;
+}
+.switch input:checked + .toggle::before {
+    transform: translateX(15px);
+}
+.switch input:checked + .toggle {
+    background-color: var(--Light-Red);
+}
+.details h6::before{
+    content: '';
+    width: 90px;
+    height: 18px;
+    z-index: -1;
+    position: absolute;
+    background-color: var(--Light-Grayish-Red);
+    border-radius: 50px;
+    transform: translate(-8px , -2px);
+}
+.details h6{
+    z-index: 1;
+    color: var(--Light-Red);
+}
+hr {
+    margin-top: 40px;
+    border: 0;
+    height: 0.5px;
+    background:hsla(222, 45%, 90%, 0.651);
+    transform: translateX(-40px);
+    width: 550px;
+}
+.checks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px ;
+}
+.check{
+    display: flex;
+    margin-bottom: 10px;
+}
+.check img{
+    margin-right: 14px;
+    width: 10px;
+    height: 10px    ;
+    transform: translateY(3px);
+}
+.check h5{
+    font-weight: 600;
+    color: hsl(225, 20%, 60%);
+    font-size: 12px;
+}
+button {
+    position: absolute;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    width: 150px;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 11px;
+    outline: none;
+    border: none;
+    height: 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    bottom: 50px;
+    right: 150px;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: hsl(224, 100%, 19%);
+    color:  hsl(226, 100%, 93%);
+}
+
+@media screen and (max-width: 375px) {
+    .backgroud img {
+        transform: translateX(-80px);
+        transform: translateY(-20px);
+    }
+    .container {
+        margin: 0px;
+        width: 375px;
+    }
+    .title h4 {
+        font-size: 30px;
+    }
+}
+
+
+/* todo fix title in desktop size */
